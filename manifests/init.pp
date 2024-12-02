@@ -24,35 +24,44 @@
 # @param allowed_hosts
 #   Specifies the hosts that NRPE will accept connections from.
 # @param server_address
-#   Specifies the IP address of the inteface that NRPE should bind to. Useful when the system has more than one interface.
+#   Specifies the IP address of the inteface that NRPE should bind to. Useful when the system has 
+#   more than one interface.
 # @param commands
-#   A Hash of `nrpe::command` resources you want to create.  Recommended when you want to define `nrpe::command`s in hiera data.
+#   A Hash of `nrpe::command` resources you want to create.  Recommended when you want to define 
+#   `nrpe::command`s in hiera data.
 # @param plugins
-#   A Hash of `nrpe::plugin` resources you want to create.  Recommended when you want to define `nrpe::plugin`s in hiera data.
+#   A Hash of `nrpe::plugin` resources you want to create.  Recommended when you want to define 
+#   `nrpe::plugin`s in hiera data.
 # @param command_timeout
-#   Specifies the maximum number of seconds that the NRPE daemon will allow plugins to finish executing before killing them off.
+#   Specifies the maximum number of seconds that the NRPE daemon will allow plugins to finish 
+#   executing before killing them off.
 # @param package_name
-#   The package name or array of package names that will be installed. The default is often fine, but you may wish to set this to install extra packages like `nrpe-selinux`.
+#   The package name or array of package names that will be installed. The default is often fine, 
+#   but you may wish to set this to install extra packages like `nrpe-selinux`.
 # @param manage_package
 #   By default, set to `true` and the `nrpe` class will manage the OS package(s).
 # @param purge
 #   When set to true, the module will purge any unmanaged commands from the NRPE includedir.
 # @param dont_blame_nrpe
-#   Determines whether or not the NRPE daemon will allow clients to specify arguments to commands that are executed. ENABLING THIS OPTION IS A SECURITY RISK!
+#   Determines whether or not the NRPE daemon will allow clients to specify arguments to commands 
+#   that are executed. ENABLING THIS OPTION IS A SECURITY RISK!
 # @param log_facility
 #   The syslog facility that should be used for logging purposes.
 # @param server_port
 #   The port that NRPE should listen for connections on.
 # @param command_prefix
-#   This option allows you to prefix all commands with a user-defined string.  Although often used to run all commands with sudo, `nrpe::command` has dedicated `sudo` parameters for this.
+#   This option allows you to prefix all commands with a user-defined string.  Although often used 
+#   to run all commands with sudo, `nrpe::command` has dedicated `sudo` parameters for this.
 # @param debug
 #   This option determines whether or not debugging messages are logged to the syslog facility.
 # @param connection_timeout
-#   Specifies the maximum number of seconds that the NRPE daemon will wait for a connection to be established before exiting.
+#   Specifies the maximum number of seconds that the NRPE daemon will wait for a connection to be 
+#   established before exiting.
 # @param allow_weak_random_seed
 #   Determines whether or not the NRPE daemon will use weak sources of randomness
 # @param allow_bash_command_substitution
-#   Determines whether or not the NRPE daemon will allow clients to specify arguments that contain bash command substitutions of the form `$(...)`. ** ENABLING THIS OPTION IS A HIGH SECURITY RISK! **
+#   Determines whether or not the NRPE daemon will allow clients to specify arguments that contain 
+#   bash command substitutions of the form `$(...)`. ** ENABLING THIS OPTION IS A HIGH SECURITY RISK! **
 # @param nrpe_user
 #   Determines the effective user that the NRPE daemon should run as.
 # @param nrpe_group
@@ -68,13 +77,16 @@
 # @param ssl_cert_file_content
 #   A string containing the SSL Certificate.
 # @param ssl_privatekey_file_content
-#   A string containing the SSL private **KEY**.  It is recommended to source this parameter from hiera and use EYAML or similar to encrypt the data.
+#   A string containing the SSL private **KEY**.  It is recommended to source this parameter from 
+#   hiera and use EYAML or similar to encrypt the data.
 # @param ssl_cacert_file_content
 #   A string containing the SSL CA Cert file contents.
 # @param ssl_version
-#   The SSL Version to use.  The default of `TLSv1.2+` is the most secure option available at time of writing.  Avoid having to set it to a lower value if possible.
+#   The SSL Version to use.  The default of `TLSv1.2+` is the most secure option available at time 
+#   of writing.  Avoid having to set it to a lower value if possible.
 # @param ssl_ciphers
-#   An array of ciphers that should be allowed by NRPE.  The defaults are for RSA keys and were taken from https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices.
+#   An array of ciphers that should be allowed by NRPE.  The defaults are for RSA keys and were 
+#   taken from https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices.
 # @param ssl_client_certs
 #   This options determines client certificate usage.
 # @param ssl_log_startup_params
@@ -110,7 +122,8 @@
 # @param service_name
 #   **Private** You should not need to override this parameter.
 # @param listen_queue_size
-#   Listen queue size (backlog) for serving incoming connections. You may want to increase this value under high load.
+#   Listen queue size (backlog) for serving incoming connections. You may want to increase this 
+#   value under high load.
 #
 class nrpe (
   Array[Variant[Stdlib::Fqdn,Stdlib::IP::Address]] $allowed_hosts       = ['127.0.0.1'],
