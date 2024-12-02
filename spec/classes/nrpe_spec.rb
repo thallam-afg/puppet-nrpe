@@ -110,39 +110,39 @@ describe 'nrpe' do
         case facts[:osfamily]
         when 'FreeBSD'
           it {
-            is_expected.to contain_user('nagios').
-              with_gid('nagios').
-              with_home('/var/spool/nagios').
-              with_shell('/sbin/nologin')
+            is_expected.to contain_user('nagios')
+              .with_gid('nagios')
+              .with_home('/var/spool/nagios')
+              .with_shell('/sbin/nologin')
           }
         when 'Gentoo'
           it {
-            is_expected.to contain_user('nagios').
-              with_gid('nagios').
-              with_home('/dev/null').
-              with_shell('/sbin/nologin')
+            is_expected.to contain_user('nagios')
+              .with_gid('nagios')
+              .with_home('/dev/null')
+              .with_shell('/sbin/nologin')
           }
 
         when 'OpenBSD'
           it {
-            is_expected.to contain_user('_nrpe').
-              with_gid('_nrpe').
-              with_home('/var/lib/nagios').
-              with_shell('/bin/false')
+            is_expected.to contain_user('_nrpe')
+              .with_gid('_nrpe')
+              .with_home('/var/lib/nagios')
+              .with_shell('/bin/false')
           }
         when 'RedHat'
           it {
-            is_expected.to contain_user('nrpe').
-              with_gid('nrpe').
-              with_home('/var/run/nrpe').
-              with_shell('/sbin/nologin')
+            is_expected.to contain_user('nrpe')
+              .with_gid('nrpe')
+              .with_home('/var/run/nrpe')
+              .with_shell('/sbin/nologin')
           }
         else
           it {
-            is_expected.to contain_user('nagios').
-              with_gid('nagios').
-              with_home('/var/lib/nagios').
-              with_shell('/bin/false')
+            is_expected.to contain_user('nagios')
+              .with_gid('nagios')
+              .with_home('/var/lib/nagios')
+              .with_shell('/bin/false')
           }
         end
       end
