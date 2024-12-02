@@ -23,7 +23,7 @@ describe 'nrpe::service' do
         it {
           is_expected.to contain_service(service_name).with(
             'ensure' => 'running',
-            'enable' => true
+            'enable' => true,
           )
         }
       end
