@@ -45,9 +45,9 @@ describe 'nrpe::config' do
 
         case facts[:osfamily]
         when 'Debian', 'Gentoo', 'FreeBSD'
-          it { is_expected.to contain_user('nagios').with_groups(%w[foo bar]) }
+          it { is_expected.to contain_user('nagios').with_groups(%w[foo, bar]) }
         else
-          it { is_expected.to contain_user('nrpe').with_groups(%w[foo bar]) }
+          it { is_expected.to contain_user('nrpe').with_groups(%w[foo, bar]) }
         end
       end
     end
