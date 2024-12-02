@@ -1,5 +1,24 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog] (http://keepachangelog.com/).
+This project adheres to [Semantic Versioning.] (http://semver.org/)
+
+## 7.0.0 (Unreleased)
+
+### Added
+
+* PDK 3.2.0
+* Redhat 8.0
+
+### Changed
+
+
+### Removed
+
+* Solaris support
+
+
+# Changelog pre fork
 All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
