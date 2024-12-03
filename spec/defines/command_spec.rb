@@ -23,25 +23,25 @@ describe 'nrpe::command' do
       when 'Debian'
         it {
           is_expected.to contain_file('/etc/nagios/nrpe.d/check_users.cfg').with(
-            'mode' => '0644'
+            'mode' => '0644',
           ).that_requires(['Package[nagios-nrpe-server]'])
         }
       when 'Gentoo'
         it {
           is_expected.to contain_file('/etc/nagios/nrpe.d/check_users.cfg').with(
-            'mode' => '0644'
+            'mode' => '0644',
           ).that_requires(['Package[net-analyzer/nrpe]'])
         }
       when 'FreeBSD'
         it {
           is_expected.to contain_file('/usr/local/etc/nrpe.d/check_users.cfg').with(
-            'mode' => '0644'
+            'mode' => '0644',
           ).that_requires(['Package[nrpe3]'])
         }
       else
         it {
           is_expected.to contain_file('/etc/nrpe.d/check_users.cfg').with(
-            'mode' => '0644'
+            'mode' => '0644',
           ).that_requires(['Package[nrpe]'])
         }
       end

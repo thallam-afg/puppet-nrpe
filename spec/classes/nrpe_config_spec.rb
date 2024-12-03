@@ -45,9 +45,13 @@ describe 'nrpe::config' do
 
         case facts[:osfamily]
         when 'Debian', 'Gentoo', 'FreeBSD'
+          # rubocop:disable Style/WordArray
           it { is_expected.to contain_user('nagios').with_groups(%w[foo bar]) }
+          # rubocop:enable Style/WordArray
         else
+          # rubocop:disable Style/WordArray
           it { is_expected.to contain_user('nrpe').with_groups(%w[foo bar]) }
+          # rubocop:enable Style/WordArray
         end
       end
     end

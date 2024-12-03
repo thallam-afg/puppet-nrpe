@@ -1,5 +1,30 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog] (http://keepachangelog.com/).
+This project adheres to [Semantic Versioning.] (http://semver.org/)
+
+## 6.0.2 (Unreleased)
+
+### Added
+
+* PDK 3.2.0
+* Redhat 8.0
+
+### Changed
+
+* Suppressed rubocop warnings: 
+  * nrpe_config_spec.rb : Style/WordArray
+  * nrpe_command_spec.rb : RSpec/HookArgument
+* Split long comments over multiple lines.
+
+### Removed
+
+* Solaris support.  No version was specified.
+
+# Changelog pre fork
+
+The fork was made from v6.0.1rc
+
 All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
