@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog] (http://keepachangelog.com/).
 This project adheres to [Semantic Versioning.] (http://semver.org/)
 
-## 7.0.0 (Unreleased)
+## 6.0.2 (Unreleased)
 
 ### Added
 
@@ -21,8 +21,10 @@ This project adheres to [Semantic Versioning.] (http://semver.org/)
 
 * Solaris support.  No version was specified.
 
-
 # Changelog pre fork
+
+The fork was made from v6.0.1rc
+
 All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
