@@ -40,7 +40,9 @@ describe 'nrpe::command class' do
   end
 
   describe 'Scenario: check_dummy' do
+    # rubocop:disable RSpec/HookArgument
     before do
+      # rubocop:enable RSpec/HookArgument
       apply_manifest("package { '#{nrpe_plugin_package}': ensure => present }", catch_failures: true)
     end
 
