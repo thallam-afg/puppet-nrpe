@@ -12,10 +12,14 @@ This project adheres to [Semantic Versioning.] (http://semver.org/)
 
 ### Changed
 
+* Suppressed rubocop warnings: 
+  * nrpe_config_spec.rb : Style/WordArray
+  * nrpe_command_spec.rb : RSpec/HookArgument
+* Split long comments over multiple lines.
 
 ### Removed
 
-* Solaris support
+* Solaris support.  No version was specified.
 
 
 # Changelog pre fork
